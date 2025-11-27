@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo.css">
+    <title>Reporte De Novedades</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="perfil.html">
+                <img src="images/logoSena.png" alt="Logo SENA">
+            </a>
+        </div>
+
+        <nav>
+            <a href="reporte.html">GENERAR REPORTE</a>
+            <a href="novedades.html">GENERAR NOVEDAD</a>
+        </nav>
+
+        <div class="perfil">
+            <a href="perfil.html">
+                <img src="images/holder.jpg" alt="Perfil">
+            </a>
+            <span>Camilo Montegranario</span>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="titulo">GENERAR REPORTE</h1>
+
+        <section class="contenedor">
+            <button class="btn" style="width: 40%; pointer-events: none;">REPORTE DE ASISTENCIA</button>
+
+            <form class="formulario">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>FECHA:</label>
+                        <input type="date" name="fecha">
+                    </div>
+                    <div class="form-group">
+                        <label>FICHA:</label>
+                        <input type="text" name="ficha">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>APELLIDOS:</label>
+                    <input type="text" name="apellidos">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>NOMBRE:</label>
+                        <input type="text" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>DOCUMENTOS:</label>
+                        <input type="text" name="documentos">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-success">ENVIAR</button>
+            </form>
+
+            <p style="color: #ccc; margin-top: 20px; font-size: 13px;">
+                Por favor, llene con todos los datos solicitados
+            </p>
+
+            <div class="tabla-container">
+                <h3 class="tabla-titulo">REGISTROS DE ASISTENCIA</h3>
+                <table class="tabla-reportes">
+                    <thead>
+                        <tr>
+                            <th>FECHA</th>
+                            <th>FICHA</th>
+                            <th>APELLIDOS</th>
+                            <th>NOMBRE</th>
+                            <th>DOCUMENTO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>27/11/2025</td>
+                            <td>2442101</td>
+                            <td>GARCÍA LÓPEZ</td>
+                            <td>JUAN CARLOS</td>
+                            <td>1045678901</td>
+                        </tr>
+                        <tr>
+                            <td>27/11/2025</td>
+                            <td>2442101</td>
+                            <td>MARTINEZ RUIZ</td>
+                            <td>MARÍA FERNANDA</td>
+                            <td>1032456789</td>
+                        </tr>
+                        <tr>
+                            <td>26/11/2025</td>
+                            <td>2442101</td>
+                            <td>RODRIGUEZ PEREZ</td>
+                            <td>CARLOS ANDRÉS</td>
+                            <td>1098765432</td>
+                        </tr>
+                        <tr>
+                            <td>26/11/2025</td>
+                            <td>2442103</td>
+                            <td>HERNÁNDEZ SILVA</td>
+                            <td>LAURA VALENTINA</td>
+                            <td>1023456789</td>
+                        </tr>
+                        <tr>
+                            <td>25/11/2025</td>
+                            <td>2442103</td>
+                            <td>GONZÁLEZ MORENO</td>
+                            <td>DIEGO ALEJANDRO</td>
+                            <td>1087654321</td>
+                        </tr>
+                        <tr>
+                            <td>25/11/2025</td>
+                            <td>2442105</td>
+                            <td>LÓPEZ RAMÍREZ</td>
+                            <td>ANDREA CAROLINA</td>
+                            <td>1034567890</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'reporte-confirmacion.html';
+        });
+    </script>
+</body>
+</html>

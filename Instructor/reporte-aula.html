@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo.css">
+    <title>Reporte De Aula</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="perfil.html">
+                <img src="images/logoSena.png" alt="Logo SENA">
+            </a>
+        </div>
+
+        <nav>
+            <a href="reporte.html">GENERAR REPORTE</a>
+            <a href="novedades.html">GENERAR NOVEDAD</a>
+        </nav>
+
+        <div class="perfil">
+            <a href="perfil.html">
+                <img src="images/holder.jpg" alt="Perfil">
+            </a>
+            <span>Camilo Montegranario</span>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="titulo">GENERAR REPORTE</h1>
+
+        <section class="contenedor">
+            <button class="btn" style="width: 40%; pointer-events: none;">REPORTE DE AULA</button>
+
+            <form class="formulario">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>JORNADA:</label>
+                        <select name="jornada">
+                            <option value="">Seleccionar...</option>
+                            <option value="mañana">MAÑANA</option>
+                            <option value="tarde">TARDE</option>
+                            <option value="noche">NOCHE</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>AULA:</label>
+                        <input type="text" name="aula">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>MOTIVO:</label>
+                    <textarea name="motivo" rows="6"></textarea>
+                </div>
+
+                <button type="submit" class="btn-success">ENVIAR</button>
+            </form>
+
+            <p style="color: #ccc; margin-top: 20px; font-size: 13px;">
+                Por favor, llene con todos los datos solicitados
+            </p>
+        </section>
+    </main>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'reporte-confirmacion.html';
+        });
+    </script>
+</body>
+</html>

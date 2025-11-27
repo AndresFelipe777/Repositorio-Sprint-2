@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo.css">
+    <title>Document</title>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="perfil.html">
+            <img src="images/logoSena.png" alt="Logo SENA">
+        </a>
+    </div>
+
+    <nav>
+        <a href="reporte.html">GENERAR REPORTE</a>
+        <a href="novedades.html">GENERAR NOVEDAD</a>
+    </nav>
+
+    <div class="perfil">
+        <a href="perfil.html">
+            <img src="images/holder.jpg" alt="Perfil">
+        </a>
+        <span>Camilo Montegranario</span>
+    </div>
+</header>
+
+<main>
+    <section class="perfil-contenedor">
+        
+        <div class="menu-perfil">
+            <div class="dropdown">
+                <button class="dropdown-btn">
+                    INSTRUCTOR ▼
+                </button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="reporte.html">GENERAR REPORTE</a>
+                    <a href="novedades.html">GENERAR NOVEDAD</a>
+                    <a href="login.html">CERRAR SESIÓN</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="datos">
+            <input type="text" value="CAMILO MONTEGRANARIO" readonly>
+            <input type="text" value="2131231312321" readonly>
+            <input type="text" value="3137854568" readonly>
+            <input type="text" value="camilom@sena.edu.co" readonly>
+            <input type="text" value="ADSO" readonly>
+        </div>
+
+    </section>
+</main>
+
+<script>
+    // Toggle dropdown
+    document.querySelector('.dropdown-btn').addEventListener('click', function() {
+        const dropdown = document.getElementById('dropdownMenu');
+        dropdown.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('.dropdown-btn')) {
+            const dropdowns = document.getElementsByClassName('dropdown-content');
+            for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

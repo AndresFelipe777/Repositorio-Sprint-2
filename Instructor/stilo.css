@@ -1,0 +1,393 @@
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #1a1a1a;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/fondo1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 70px;
+    background: #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 45px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.perfil a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.perfil img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* TITULOS */
+.titulo {
+    width: 70%;
+    margin: 40px auto 20px auto;
+    padding: 15px;
+    text-align: center;
+    background: #4a4a4a;
+    border: 2px solid #5a5a5a;
+    border-radius: 10px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* CONTENEDOR NOVEDADES */
+.contenedor {
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #4a4a4a;
+    border-radius: 15px;
+    border: 2px solid #5a5a5a;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+/* BOTONES */
+.btn {
+    width: 60%;
+    padding: 15px 0;
+    background: #636363;
+    border: 2px solid #7a7a7a;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #7a7a7a;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: #4caf50;
+    border: 2px solid #66bb6a;
+    padding: 12px 40px;
+    width: auto;
+    margin: 20px auto 0;
+}
+
+.btn-success:hover {
+    background: #66bb6a;
+}
+
+/* PERFIL */
+.perfil-contenedor {
+    width: 40%;
+    margin: 40px auto;
+    padding: 40px;
+    background: #4a4a4a;
+    border-radius: 15px;
+    border: 2px solid #5a5a5a;
+    text-align: center;
+}
+
+.menu-perfil {
+    margin-bottom: 30px;
+}
+
+.menu-perfil select,
+.menu-perfil .btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.menu-perfil select {
+    padding: 15px;
+    background: #636363;
+    border: 2px solid #7a7a7a;
+    color: white;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 15px;
+    background: #636363;
+    border: 2px solid #7a7a7a;
+    border-radius: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.dropdown-btn:hover {
+    background: #7a7a7a;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #3a3a3a;
+    border: 2px solid #7a7a7a;
+    border-radius: 10px;
+    margin-top: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #5a5a5a;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background: #4a4a4a;
+}
+
+.dropdown-content.show {
+    display: block;
+    animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLAS */
+.tabla-container {
+    width: 100%;
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+.tabla-reportes {
+    width: 100%;
+    border-collapse: collapse;
+    background: #3a3a3a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-reportes thead {
+    background: #2a2a2a;
+}
+
+.tabla-reportes th {
+    padding: 15px;
+    text-align: left;
+    color: #4caf50;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #4caf50;
+}
+
+.tabla-reportes td {
+    padding: 12px 15px;
+    color: white;
+    font-size: 13px;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.tabla-reportes tr:hover {
+    background: #4a4a4a;
+}
+
+.tabla-reportes tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-titulo {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* DATOS */
+.datos input {
+    width: 90%;
+    padding: 10px;
+    margin: 7px 0;
+    border: 2px solid #7a7a7a;
+    background: #636363;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+/* FORMULARIOS */
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #636363;
+    border: 2px solid #7a7a7a;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* CONFIRMACION */
+.confirmacion-box {
+    width: 70%;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 60px 40px;
+    background: #4a4a4a;
+    border-radius: 15px;
+    border: 2px solid #5a5a5a;
+    text-align: center;
+}
+
+.confirmacion-box h2 {
+    color: white;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.confirmacion-box p {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #888;
+    font-size: 12px;
+    text-align: right;
+}
+
+footer p {
+    margin: 2px 0;
+}

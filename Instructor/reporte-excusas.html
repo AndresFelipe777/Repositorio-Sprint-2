@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo.css">
+    <title>Reporte De Excusas</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="perfil.html">
+                <img src="images/logoSena.png" alt="Logo SENA">
+            </a>
+        </div>
+
+        <nav>
+            <a href="reporte.html">GENERAR REPORTE</a>
+            <a href="novedades.html">GENERAR NOVEDAD</a>
+        </nav>
+
+        <div class="perfil">
+            <a href="perfil.html">
+                <img src="images/holder.jpg" alt="Perfil">
+            </a>
+            <span>Camilo Montegranario</span>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="titulo">GENERAR REPORTE</h1>
+
+        <section class="contenedor">
+            <button class="btn" style="width: 40%; pointer-events: none;">REPORTE DE EXCUSAS</button>
+
+            <form class="formulario">
+                <div class="form-group">
+                    <label>FECHA:</label>
+                    <input type="date" name="fecha">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>MOTIVO:</label>
+                        <select name="motivo">
+                            <option value="">Seleccionar...</option>
+                            <option value="medica">MÉDICA</option>
+                            <option value="personal">PERSONAL</option>
+                            <option value="academica">ACADÉMICA</option>
+                            <option value="otra">OTRA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>NOMBRE:</label>
+                        <input type="text" name="nombre">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>APELLIDOS:</label>
+                        <input type="text" name="apellidos">
+                    </div>
+                    <div class="form-group">
+                        <label>DOCUMENTOS:</label>
+                        <input type="text" name="documentos">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-success">ENVIAR</button>
+            </form>
+
+            <p style="color: #ccc; margin-top: 20px; font-size: 13px;">
+                Por favor, llene con todos los datos solicitados
+            </p>
+
+            <div class="tabla-container">
+                <h3 class="tabla-titulo">REGISTROS DE EXCUSAS</h3>
+                <table class="tabla-reportes">
+                    <thead>
+                        <tr>
+                            <th>FECHA</th>
+                            <th>MOTIVO</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDOS</th>
+                            <th>DOCUMENTO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>27/11/2025</td>
+                            <td>MÉDICA</td>
+                            <td>SANTIAGO</td>
+                            <td>TORRES MENDOZA</td>
+                            <td>1056789012</td>
+                        </tr>
+                        <tr>
+                            <td>27/11/2025</td>
+                            <td>PERSONAL</td>
+                            <td>CAMILA</td>
+                            <td>VARGAS CASTRO</td>
+                            <td>1067890123</td>
+                        </tr>
+                        <tr>
+                            <td>26/11/2025</td>
+                            <td>MÉDICA</td>
+                            <td>DANIEL</td>
+                            <td>ORTIZ JIMÉNEZ</td>
+                            <td>1078901234</td>
+                        </tr>
+                        <tr>
+                            <td>26/11/2025</td>
+                            <td>ACADÉMICA</td>
+                            <td>VALENTINA</td>
+                            <td>REYES SÁNCHEZ</td>
+                            <td>1089012345</td>
+                        </tr>
+                        <tr>
+                            <td>25/11/2025</td>
+                            <td>PERSONAL</td>
+                            <td>SEBASTIÁN</td>
+                            <td>CRUZ DELGADO</td>
+                            <td>1090123456</td>
+                        </tr>
+                        <tr>
+                            <td>25/11/2025</td>
+                            <td>MÉDICA</td>
+                            <td>ISABELLA</td>
+                            <td>MORALES VEGA</td>
+                            <td>1012345678</td>
+                        </tr>
+                        <tr>
+                            <td>24/11/2025</td>
+                            <td>OTRA</td>
+                            <td>MATEO</td>
+                            <td>RÍOS PAREDES</td>
+                            <td>1023456780</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'reporte-confirmacion.html';
+        });
+    </script>
+</body>
+</html>
