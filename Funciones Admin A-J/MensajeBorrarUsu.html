@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Borrar Usuarios</title>
+    <link rel="stylesheet" href="/stylemensajeborrarusu.css">
+</head>
+<body>
+
+<div id="mensaje-arriba" class="mensaje-oculto">
+   ❌ Usuario eliminado  Correctamente...
+</div>
+
+<header class="barra-superior">
+  <div class="logo">
+    <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png?rev=40" alt="Logo SENA">
+  </div>
+
+  <nav class="menu-superior">
+
+    <div class="menu-desplegable">
+      <a href="index.html" class="activo">Usuarios</a>
+      <div class="submenu">
+        <a href="AgregarNuevosUsu.html">Crear usuarios</a>
+      </div>
+    </div>
+
+    <div class="menu-desplegable">
+      <a href="#">Registro De Acceso</a>
+      <div class="submenu">
+        <a href="RegistroDeInstructores.html">Instructores</a>
+        <a href="RegistroDeAcceso.html">Aprendices</a>
+      </div>
+    </div>
+
+    <a href="Reporte-novedades.html">Reporte De Novedades</a>
+    <a href="reporte-instructor.html">Reportes Al Instructor</a>
+
+  </nav>
+
+  <div class="perfil">
+    <div class="perfil-info">
+      <img src="https://cdn-icons-png.flaticon.com/512/711/711769.png" alt="Perfil">
+      <div class="perfil-datos">
+        <span class="nombre">Juan Pablo</span>
+        <span class="id">ID: 387878223</span>
+        <span class="rol">Rol: Administrador</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="titulo">
+    <h1>Eliminar Usuario</h1>
+</div>
+
+<div class="contenedor-formulario">
+
+    <div class="mensaje-exito">
+    <h2>Usuario eliminado correctamente</h2>
+    <p>El usuario ha sido eliminado del sistema y su información ya no estará disponible.</p>
+    <p>Esta acción es permanente y no se puede deshacer.</p>
+</div>
+
+    <div class="botones-actua-usuario">
+        <button type="button" class="btn-cancelar-eliminar">Cancelar</button>
+        <button type="button" class="btn-eliminar">Aceptar</button>
+    </div>
+
+</div>
+
+<div class="footer-end">
+    <p>© 20xx <br> SENA-SCS. <br> Todos los derechos reservados.</p>
+</div>
+
+<script>
+    document.querySelector(".btn-eliminar").addEventListener("click", function () {
+
+        const mensaje = document.getElementById("mensaje-arriba");
+        mensaje.classList.add("mostrar");
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 1500);
+    });
+</script>
+
+</body>
+</html>

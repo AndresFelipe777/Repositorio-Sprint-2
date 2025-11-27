@@ -1,0 +1,255 @@
+body {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.589)),
+        url('Img/fondo.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: #1e1e1e;
+    background-size: 1000px;
+}
+#mensaje-arriba {
+    position: fixed;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2ecc71;
+    color: #000;
+    padding: 18px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: 0.5s ease;
+    z-index: 2000;
+}
+
+#mensaje-arriba.mostrar {
+    top: 20px;
+}
+/* === Barra superior === */
+.barra-superior {
+  width: 100%;
+  height: 60px;
+  background-color: #4b4b4b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 0 25px;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  width: 2.8rem;
+  height: 2.8rem;
+  object-fit: cover;
+}
+
+.menu-superior {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.menu-superior a {
+  color: #dcdcdc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu-superior a:hover {
+  color: #b6ff96;
+}
+
+.menu-superior a.activo {
+  color: #10d63f;
+}
+
+.menu-desplegable {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #4b4b4b;
+  border-radius: 6px;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+.submenu a {
+  padding: 10px 20px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background-color: #444;
+}
+
+.menu-desplegable:hover .submenu {
+  display: flex;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 40px;
+}
+
+.perfil-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 4px;
+}
+
+.perfil-datos {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  text-align: right;
+  line-height: 1.3;
+}
+
+.perfil-datos .nombre {
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+.perfil-datos .id,
+.perfil-datos .rol {
+  color: #e0e0e0;
+}
+/* Título */
+.titulo {
+    margin-top: 65px;
+    background: #323133;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+      backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;    
+  background: rgba(0, 0, 0, 0.15);  
+  box-shadow: #ffffff 0px 0px 10px;
+}
+
+.titulo h1 {
+    color: #fff;
+}
+
+/* Contenedor */
+.contenedor-formulario {
+    background: #323133;
+    width: 60%;
+    margin: 5px auto;
+    border-radius: 15px;
+    padding: 40px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;    
+  background: rgba(0, 0, 0, 0.15);  
+  box-shadow: #ffffff 0px 0px 10px;
+}
+mensaje-exito.advertencia {
+    background: #3a3a3c;
+    border-left: 6px solid #ff4d4d;
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+.mensaje-exito.advertencia h2 {
+    color: #ff6b6b;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.mensaje-exito.advertencia p {
+    color: #e8e8e8;
+    font-size: 17px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.botones-actua-usuario {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.btn-cancelar-eliminar {
+    width: 120px;
+    height: 50px;
+    color: #b6ff96;
+    font-size: 20px;
+    border: 2px solid #b6ff96;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.btn-eliminar{
+     color: #b6ff96;
+    background-color: red;
+     width: 120px;
+    height: 50px;
+    font-size: 20px;
+    border: 2px solid #b6ff96;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-cancelar-eliminar:hover {
+    background-color: rgba(182, 255, 150, 0.2);
+}
+.btn-eliminar:hover {
+    background-color:red;
+}
+
+/* Footer */
+.footer-end {
+    text-align: center;
+    color: #e8fcebbd;
+}
+
+*{
+font-family: sans-serif;
+}

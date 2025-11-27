@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Eliminación</title>
+    <link rel="stylesheet" href="/stylemensajeadvertencia.css">
+</head>
+<body>
+
+<header class="barra-superior">
+  <div class="logo">
+    <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png?rev=40" alt="Logo SENA">
+  </div>
+
+  <nav class="menu-superior">
+
+    <div class="menu-desplegable">
+      <a href="index.html" class="activo">Usuarios</a>
+      <div class="submenu">
+        <a href="AgregarNuevosUsu.html">Crear usuarios</a>
+      </div>
+    </div>
+
+    <div class="menu-desplegable">
+      <a href="#">Registro De Acceso</a>
+      <div class="submenu">
+        <a href="RegistroDeInstructores.html">Instructores</a>
+        <a href="RegistroDeAcceso.html">Aprendices</a>
+      </div>
+    </div>
+
+    <a href="Reporte-novedades.html">Reporte De Novedades</a>
+    <a href="reporte-instructor.html">Reportes Al Instructor</a>
+
+  </nav>
+
+  <div class="perfil">
+    <div class="perfil-info">
+      <img src="https://cdn-icons-png.flaticon.com/512/711/711769.png" alt="Perfil">
+      <div class="perfil-datos">
+        <span class="nombre">Juan Pablo</span>
+        <span class="id">ID: 387878223</span>
+        <span class="rol">Rol: Administrador</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="titulo">
+    <h1>Eliminar Usuario</h1>
+</div>
+
+<div class="contenedor-formulario">
+
+    <div class="mensaje-exito advertencia">
+        <h2> ⚠️ ¿Está seguro de eliminar este usuario? ⚠️</h2>
+        <p>Una vez eliminado, no será posible recuperar su información ni su historial en el sistema.</p>
+        <p>Confirme si desea continuar con la eliminación del usuario seleccionado.</p>
+    </div>
+
+    <div class="botones-actua-usuario">
+        <button type="button" class="btn-cancelar-eliminar">Cancelar</button>
+         <button type="button" class="btn-eliminar" onclick="location.href='Mensajeborrarusu.html'">
+  Eliminar
+        
+    </div>
+
+</div>
+
+<div class="footer-end">
+    <p>© 20xx <br> SENA-SCS. <br> Todos los derechos reservados.</p>
+</div>
+
+</body>
+</html>
